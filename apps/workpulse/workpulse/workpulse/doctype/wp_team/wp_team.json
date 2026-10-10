@@ -1,0 +1,18 @@
+{
+ "doctype": "DocType",
+ "name": "WP Team",
+ "module": "WorkPulse",
+ "autoname": "field:team_name",
+ "field_order": ["team_name", "project", "lead", "members"],
+ "fields": [
+  {"fieldname": "team_name", "fieldtype": "Data", "label": "Team Name", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "project", "fieldtype": "Link", "label": "Project", "options": "Project"},
+  {"fieldname": "lead", "fieldtype": "Link", "label": "Lead", "options": "Employee"},
+  {"fieldname": "members", "fieldtype": "Table", "label": "Members", "options": "WP Team Member"}
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+  {"role": "Projects Manager", "read": 1, "write": 1, "create": 1},
+  {"role": "Projects User", "read": 1}
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "doctype": "DocType",
+ "name": "WP Employee Project History",
+ "module": "WorkPulse",
+ "autoname": "hash",
+ "field_order": ["employee", "project", "role", "from_date", "to_date", "tech_stack", "tasks_done", "on_time_pct", "est_error_pct", "skills_demonstrated"],
+ "fields": [
+  {"fieldname": "employee", "fieldtype": "Link", "label": "Employee", "options": "Employee", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "project", "fieldtype": "Link", "label": "Project", "options": "Project", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "role", "fieldtype": "Data", "label": "Role"},
+  {"fieldname": "from_date", "fieldtype": "Date", "label": "From Date"},
+  {"fieldname": "to_date", "fieldtype": "Date", "label": "To Date"},
+  {"fieldname": "tech_stack", "fieldtype": "Code", "label": "Tech Stack", "options": "JSON"},
+  {"fieldname": "tasks_done", "fieldtype": "Int", "label": "Tasks Done"},
+  {"fieldname": "on_time_pct", "fieldtype": "Percent", "label": "On Time %"},
+  {"fieldname": "est_error_pct", "fieldtype": "Percent", "label": "Estimate Error %"},
+  {"fieldname": "skills_demonstrated", "fieldtype": "Code", "label": "Skills Demonstrated", "options": "JSON"}
+ ],
+ "permissions": [{"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1}, {"role": "HR Manager", "read": 1}, {"role": "Projects User", "read": 1}]
+}

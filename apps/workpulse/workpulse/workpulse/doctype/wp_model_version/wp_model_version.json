@@ -1,0 +1,22 @@
+{
+ "doctype": "DocType",
+ "name": "WP Model Version",
+ "module": "WorkPulse",
+ "autoname": "format:WP-MV-{#####}",
+ "field_order": ["model_name", "version", "status", "metrics", "training_end_date", "activated_by", "activated_on", "notes"],
+ "fields": [
+  {"fieldname": "model_name", "fieldtype": "Data", "label": "Model Name", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "version", "fieldtype": "Data", "label": "Version", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Candidate\nActive\nRetired", "default": "Candidate", "in_list_view": 1},
+  {"fieldname": "metrics", "fieldtype": "Code", "label": "Metrics", "options": "JSON"},
+  {"fieldname": "training_end_date", "fieldtype": "Date", "label": "Training End Date"},
+  {"fieldname": "activated_by", "fieldtype": "Link", "label": "Activated By", "options": "User"},
+  {"fieldname": "activated_on", "fieldtype": "Datetime", "label": "Activated On"},
+  {"fieldname": "notes", "fieldtype": "Small Text", "label": "Notes"}
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+  {"role": "HR Manager", "read": 1},
+  {"role": "Projects Manager", "read": 1}
+ ]
+}

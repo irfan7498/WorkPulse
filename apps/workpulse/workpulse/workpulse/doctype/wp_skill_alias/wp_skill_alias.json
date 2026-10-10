@@ -1,0 +1,12 @@
+{
+ "doctype": "DocType",
+ "name": "WP Skill Alias",
+ "module": "WorkPulse",
+ "autoname": "format:{skill}-{alias}",
+ "field_order": ["skill", "alias"],
+ "fields": [
+  {"fieldname": "skill", "fieldtype": "Link", "label": "Skill", "options": "Skill", "reqd": 1},
+  {"fieldname": "alias", "fieldtype": "Data", "label": "Alias", "reqd": 1}
+ ],
+ "permissions": [{"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1}, {"role": "HR Manager", "read": 1, "write": 1, "create": 1}]
+}

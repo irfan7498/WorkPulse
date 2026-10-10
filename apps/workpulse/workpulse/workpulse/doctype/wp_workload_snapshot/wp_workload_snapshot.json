@@ -1,0 +1,96 @@
+{
+ "allow_rename": 0,
+ "autoname": "format:{employee}-{week_start}",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "week_start",
+  "capacity_h",
+  "planned_h",
+  "workload_pct",
+  "active_tasks",
+  "critical_tasks",
+  "leave_days",
+  "flags",
+  "computed_at",
+  "engine_version"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "week_start",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Week Start",
+   "reqd": 1
+  },
+  {
+   "fieldname": "capacity_h",
+   "fieldtype": "Float",
+   "label": "Capacity (h)"
+  },
+  {
+   "fieldname": "planned_h",
+   "fieldtype": "Float",
+   "label": "Planned (h)"
+  },
+  {
+   "fieldname": "workload_pct",
+   "fieldtype": "Float",
+   "label": "Workload %"
+  },
+  {
+   "fieldname": "active_tasks",
+   "fieldtype": "Int",
+   "label": "Active Tasks"
+  },
+  {
+   "fieldname": "critical_tasks",
+   "fieldtype": "Int",
+   "label": "Critical Tasks"
+  },
+  {
+   "fieldname": "leave_days",
+   "fieldtype": "Float",
+   "label": "Leave Days"
+  },
+  {
+   "fieldname": "flags",
+   "fieldtype": "Small Text",
+   "label": "Data Flags"
+  },
+  {
+   "fieldname": "computed_at",
+   "fieldtype": "Datetime",
+   "label": "Computed At"
+  },
+  {
+   "fieldname": "engine_version",
+   "fieldtype": "Data",
+   "label": "Engine Version"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-10-05 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "WorkPulse",
+ "name": "WP Workload Snapshot",
+ "owner": "Administrator",
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+  {"role": "HR Manager", "read": 1},
+  {"role": "Projects User", "read": 1}
+ ],
+ "sort_field": "week_start",
+ "sort_order": "DESC",
+ "track_changes": 0
+}

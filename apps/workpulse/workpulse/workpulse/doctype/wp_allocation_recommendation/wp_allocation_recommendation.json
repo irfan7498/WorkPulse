@@ -1,0 +1,19 @@
+{
+ "doctype": "DocType",
+ "name": "WP Allocation Recommendation",
+ "module": "WorkPulse",
+ "autoname": "format:WP-AR-{#####}",
+ "field_order": ["task", "status", "candidates", "explanation", "approved_by", "chosen_employee", "engine_version", "weights_used", "review_action"],
+ "fields": [
+  {"fieldname": "task", "fieldtype": "Link", "label": "Task", "options": "Task", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Suggested\nApproved\nRejected\nSuperseded", "default": "Suggested", "in_list_view": 1},
+  {"fieldname": "candidates", "fieldtype": "Code", "label": "Candidates", "options": "JSON"},
+  {"fieldname": "explanation", "fieldtype": "Small Text", "label": "Explanation"},
+  {"fieldname": "approved_by", "fieldtype": "Link", "label": "Approved By", "options": "User"},
+  {"fieldname": "chosen_employee", "fieldtype": "Link", "label": "Chosen Employee", "options": "Employee"},
+  {"fieldname": "engine_version", "fieldtype": "Data", "label": "Engine Version", "default": "rules-1"},
+  {"fieldname": "weights_used", "fieldtype": "Code", "label": "Weights Used", "options": "JSON"}
+  ,{"fieldname": "review_action", "fieldtype": "Select", "label": "Review Action", "options": "\nApprove\nReject"}
+ ],
+ "permissions": [{"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1}, {"role": "Projects Manager", "read": 1, "write": 1, "create": 1}]
+}

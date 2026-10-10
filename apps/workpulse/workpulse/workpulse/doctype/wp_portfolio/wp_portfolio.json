@@ -1,0 +1,21 @@
+{
+ "doctype": "DocType",
+ "name": "WP Portfolio",
+ "module": "WorkPulse",
+ "is_tree": 1,
+ "autoname": "field:portfolio_name",
+ "field_order": ["portfolio_name", "parent_wp_portfolio", "is_group", "lft", "rgt", "old_parent"],
+ "fields": [
+  {"fieldname": "portfolio_name", "fieldtype": "Data", "label": "Portfolio Name", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "parent_wp_portfolio", "fieldtype": "Link", "label": "Parent Portfolio", "options": "WP Portfolio", "ignore_user_permissions": 1},
+  {"fieldname": "is_group", "fieldtype": "Check", "label": "Is Group", "default": "1"},
+  {"fieldname": "lft", "fieldtype": "Int", "hidden": 1, "read_only": 1},
+  {"fieldname": "rgt", "fieldtype": "Int", "hidden": 1, "read_only": 1},
+  {"fieldname": "old_parent", "fieldtype": "Link", "options": "WP Portfolio", "hidden": 1, "read_only": 1}
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+  {"role": "Projects Manager", "read": 1, "write": 1, "create": 1},
+  {"role": "Projects User", "read": 1}
+ ]
+}

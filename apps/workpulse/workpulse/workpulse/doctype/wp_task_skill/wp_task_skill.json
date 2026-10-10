@@ -1,0 +1,12 @@
+{
+ "doctype": "DocType",
+ "name": "WP Task Skill",
+ "module": "WorkPulse",
+ "istable": 1,
+ "field_order": ["skill", "min_level", "weight"],
+ "fields": [
+  {"fieldname": "skill", "fieldtype": "Link", "label": "Skill", "options": "Skill", "reqd": 1},
+  {"fieldname": "min_level", "fieldtype": "Float", "label": "Minimum Level", "default": "1"},
+  {"fieldname": "weight", "fieldtype": "Float", "label": "Weight", "default": "1"}
+ ]
+}

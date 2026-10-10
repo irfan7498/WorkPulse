@@ -1,0 +1,12 @@
+{
+ "doctype": "DocType",
+ "name": "WP Team Requirement",
+ "module": "WorkPulse",
+ "autoname": "field:team",
+ "field_order": ["team", "requirements"],
+ "fields": [
+  {"fieldname": "team", "fieldtype": "Link", "label": "Team", "options": "WP Team", "reqd": 1},
+  {"fieldname": "requirements", "fieldtype": "Table", "label": "Requirements", "options": "WP Team Requirement Row"}
+ ],
+ "permissions": [{"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1}, {"role": "Projects Manager", "read": 1, "write": 1, "create": 1}]
+}

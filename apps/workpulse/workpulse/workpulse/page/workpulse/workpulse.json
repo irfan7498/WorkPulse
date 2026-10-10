@@ -1,0 +1,10 @@
+{
+ "doctype": "Page",
+ "name": "workpulse",
+ "page_name": "workpulse",
+ "title": "WorkPulse",
+ "module": "WorkPulse",
+ "standard": "Yes",
+ "system_page": 0,
+ "roles": []
+}

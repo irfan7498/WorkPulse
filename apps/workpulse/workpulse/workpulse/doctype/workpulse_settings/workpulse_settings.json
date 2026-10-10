@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-09-30 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "daily_hours",
+  "meeting_overhead_pct",
+  "workload_ceiling_pct",
+  "workload_warn_pct",
+  "default_task_hours",
+  "w_skill",
+  "w_capacity",
+  "w_history",
+  "w_reliability",
+  "llm_enabled",
+  "llm_provider",
+  "llm_model",
+  "llm_api_key_env",
+  "llm_endpoint",
+  "ml_enabled",
+  "min_samples_for_ml",
+  "lookahead_days"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "default": "8",
+   "fieldname": "daily_hours",
+   "fieldtype": "Float",
+   "label": "Daily Hours",
+   "description": "Default hours available per working day."
+  },
+  {
+   "default": "10",
+   "fieldname": "meeting_overhead_pct",
+   "fieldtype": "Percent",
+   "label": "Meeting Overhead %"
+  },
+  {
+   "default": "100",
+   "fieldname": "workload_ceiling_pct",
+   "fieldtype": "Percent",
+   "label": "Workload Ceiling %",
+   "description": "Allocation ceiling before a candidate is excluded."
+  },
+  {
+   "default": "85",
+   "fieldname": "workload_warn_pct",
+   "fieldtype": "Percent",
+   "label": "Workload Warning %"
+  },
+  {
+   "default": "8",
+   "fieldname": "default_task_hours",
+   "fieldtype": "Float",
+   "label": "Default Task Hours",
+   "description": "Fallback estimate when a task has no estimate."
+  },
+  {
+   "default": "0.4",
+   "fieldname": "w_skill",
+   "fieldtype": "Float",
+   "label": "Skill Weight"
+  },
+  {
+   "default": "0.25",
+   "fieldname": "w_capacity",
+   "fieldtype": "Float",
+   "label": "Capacity Weight"
+  },
+  {
+   "default": "0.2",
+   "fieldname": "w_history",
+   "fieldtype": "Float",
+   "label": "History Weight"
+  },
+  {
+   "default": "0.15",
+   "fieldname": "w_reliability",
+   "fieldtype": "Float",
+   "label": "Reliability Weight"
+  },
+  {
+   "default": "0",
+   "fieldname": "llm_enabled",
+   "fieldtype": "Check",
+   "label": "LLM Enabled"
+  },
+  {
+   "default": "OpenAI-compatible",
+   "fieldname": "llm_provider",
+   "fieldtype": "Data",
+   "label": "LLM Provider"
+  },
+  {
+   "default": "gpt-4o-mini",
+   "fieldname": "llm_model",
+   "fieldtype": "Data",
+   "label": "LLM Model"
+  },
+  {
+   "default": "WORKPULSE_LLM_API_KEY",
+   "fieldname": "llm_api_key_env",
+   "fieldtype": "Data",
+   "label": "API Key Environment Variable",
+   "description": "Name of the environment variable containing the provider key; the key is never stored in Frappe."
+  },
+  {
+   "default": "https://api.openai.com/v1/chat/completions",
+   "fieldname": "llm_endpoint",
+   "fieldtype": "Data",
+   "label": "LLM Endpoint"
+  },
+  {
+   "default": "0",
+   "fieldname": "ml_enabled",
+   "fieldtype": "Check",
+   "label": "ML Enabled"
+  },
+  {
+   "default": "300",
+   "fieldname": "min_samples_for_ml",
+   "fieldtype": "Int",
+   "label": "Min Samples for ML"
+  },
+  {
+   "default": "7",
+   "fieldname": "lookahead_days",
+   "fieldtype": "Int",
+   "label": "Lookahead Days",
+   "description": "Days after return to check for task deadlines."
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-09-30 00:00:00.000000",
+ "module": "WorkPulse",
+ "name": "WorkPulse Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1},
+  {"role": "HR Manager", "read": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

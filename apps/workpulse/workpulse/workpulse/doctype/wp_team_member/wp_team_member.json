@@ -1,0 +1,14 @@
+{
+ "doctype": "DocType",
+ "name": "WP Team Member",
+ "module": "WorkPulse",
+ "istable": 1,
+ "field_order": ["employee", "role", "allocation_pct", "from_date", "to_date"],
+ "fields": [
+  {"fieldname": "employee", "fieldtype": "Link", "label": "Employee", "options": "Employee", "reqd": 1},
+  {"fieldname": "role", "fieldtype": "Data", "label": "Role"},
+  {"fieldname": "allocation_pct", "fieldtype": "Percent", "label": "Allocation %", "default": "100"},
+  {"fieldname": "from_date", "fieldtype": "Date", "label": "From Date"},
+  {"fieldname": "to_date", "fieldtype": "Date", "label": "To Date"}
+ ]
+}

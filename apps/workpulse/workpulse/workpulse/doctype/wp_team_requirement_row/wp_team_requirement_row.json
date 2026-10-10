@@ -1,0 +1,13 @@
+{
+ "doctype": "DocType",
+ "name": "WP Team Requirement Row",
+ "module": "WorkPulse",
+ "istable": 1,
+ "field_order": ["skill", "min_level", "headcount", "priority"],
+ "fields": [
+  {"fieldname": "skill", "fieldtype": "Link", "label": "Skill", "options": "Skill", "reqd": 1},
+  {"fieldname": "min_level", "fieldtype": "Float", "label": "Minimum Level", "default": "1"},
+  {"fieldname": "headcount", "fieldtype": "Int", "label": "Headcount", "default": "1"},
+  {"fieldname": "priority", "fieldtype": "Select", "label": "Priority", "options": "Low\nMedium\nHigh", "default": "Medium"}
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "doctype": "DocType",
+ "name": "WP Model Evaluation",
+ "module": "WorkPulse",
+ "autoname": "format:WP-ME-{#####}",
+ "field_order": ["model_version", "baseline_metric", "candidate_metric", "metric_name", "passed", "evaluated_by", "evaluated_on", "notes"],
+ "fields": [
+  {"fieldname": "model_version", "fieldtype": "Link", "label": "Model Version", "options": "WP Model Version", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "baseline_metric", "fieldtype": "Float", "label": "Baseline Metric", "reqd": 1},
+  {"fieldname": "candidate_metric", "fieldtype": "Float", "label": "Candidate Metric", "reqd": 1},
+  {"fieldname": "metric_name", "fieldtype": "Data", "label": "Metric Name", "reqd": 1},
+  {"fieldname": "passed", "fieldtype": "Check", "label": "Passed", "in_list_view": 1},
+  {"fieldname": "evaluated_by", "fieldtype": "Link", "label": "Evaluated By", "options": "User"},
+  {"fieldname": "evaluated_on", "fieldtype": "Datetime", "label": "Evaluated On"},
+  {"fieldname": "notes", "fieldtype": "Small Text", "label": "Notes"}
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+  {"role": "HR Manager", "read": 1},
+  {"role": "Projects Manager", "read": 1}
+ ]
+}
